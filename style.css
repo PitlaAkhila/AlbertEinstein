@@ -1,0 +1,197 @@
+:root{
+    --greenl: #bed1c3;
+    --greenm: #a1bda9;
+    --greenmm: #689474;
+    --greend: #54775d;
+}
+.container{
+    background-color: white;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "nav nav nav nav nav"
+    "name name name name name"
+    "About About About About About"
+    "papers papers papers papers papers"
+    "Experience Experience Experience Experience Experience"
+    "Hobbies Hobbies Hobbies Hobbies Hobbies"
+    "Blogs Blogs Blogs Blogs Blogs"
+    ;
+    grid-gap: 0.5em;
+}
+body{
+    font-family: 'Marcellus', serif;
+    max-width: 99%;
+    overflow-x: hidden;
+}
+img {
+    width: 200px;
+    height: 215px;
+    float: left;
+    padding: 0 400px 0 0;
+}
+.name{
+    width: 100%;
+    height: 100%;
+    margin-left: 0%;
+    margin-top: 0px;
+    display:inline-block;
+    background: var(--greenmm);
+    padding-bottom: 0px;
+    justify-content: left;
+    font-size: 30px;
+    grid-area: name;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--greend);
+    overflow: hidden;
+    grid-area: nav;
+}
+nav a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 4px 10px;
+    text-decoration: none;
+    width: calc(100% / 5.7);
+  }
+nav a:hover {
+    background-color: #f5f5ec;
+    color: black;
+  }
+.layout{
+    width:100%;
+    height: 100%;
+}
+#About{
+    background-color: var(--greenl);
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 0%;
+    grid-area: About;
+}
+#papers {
+    display: inline-block;
+    align-items: left;
+    margin-top: 50px;
+    display: inline-block;
+    list-style: none;
+    height:auto;
+    margin-left: 0%;
+    width: 100%;
+    background-color: var(--greend);
+    justify-content: space-around;
+    grid-area: papers;
+  }
+  div {
+    display: inline-block;
+    background-color: var(--greenm);
+    margin-left: 10px;
+    margin-top: 10px;
+    padding : 10px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+#Experiences{
+    height: auto;
+    background-color: var(--greenl);
+    line-height: 26px;
+    width: 100%;
+    margin-left: 0%;
+    grid-area: Experience;
+}
+#Hobbies{
+    height:auto;
+    background-color: var(--greenm);
+    width: 100%;
+    margin-left: 0%;
+    grid-area: Hobbies;
+
+}
+#Blogs{
+    height:auto;
+    line-height: 35px;
+    width: 100%;
+    margin-left: 0%;
+    grid-area: Blogs;
+}
+
+.row{
+    display:flex;
+    flex-direction: row;
+}
+
+.column {
+    display:flex;
+    flex-direction: column;
+    width:30%;
+  }
+
+@media screen and (max-width:1500px){
+    html,body{
+        overflow-x: hidden;
+    }
+    .About{
+        width:100%;
+        overflow: hidden;
+        margin: 0px;
+        padding: 0px;
+        position:  absolute;
+
+    }
+    .Papers{
+        width:100%;
+        overflow: hidden;
+        margin: 0px;
+        padding: 0px;
+        position:  absolute;
+        
+    }
+    nav{
+        overflow: hidden;
+    }
+    .Experiences{
+        width:100%;
+        height:auto;
+        overflow: hidden;
+        margin: 0px;
+        padding: 0px;
+        position:  absolute;
+        
+    }
+    .Hobbies{
+        width:100%;
+        height:auto;
+        justify-content:space-around;
+        overflow: hidden;
+        margin: 0px;
+        padding: 0px;
+        position:  absolute;
+        
+    }
+    .Blogs{
+        width:100%;
+        height:auto;
+        overflow: hidden;
+        margin: 0px;
+        padding: 0px;
+        position:  absolute;
+        
+    }
+   
+}
